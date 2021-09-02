@@ -7,18 +7,15 @@ const robot = new Robot({
 });
 
 exports.study = function () {
-  const FeedCard = Robot.FeedCard;
+  const Markdown = Robot.Markdown;
 
-  const feedCard = new FeedCard([
-    {
-      title: '前端周刊',
-      messageURL:
-        'https://frontend-weekly.com/',
-      picURL: 'https://frontend-weekly.com/gitbook/images/favicon.ico',
-    },
-  ]);
+  const markdown = new Markdown();
 
-  robot.send(feedCard);
+  markDown
+    .setTitle('前端周刊')
+    .add('### [前端周刊](https://frontend-weekly.com/)');
+
+  robot.send(markdown);
 };
 
 exports.notify = function () {};
