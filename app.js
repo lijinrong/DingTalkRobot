@@ -39,7 +39,7 @@ app.use(async (ctx, next) => {
 app.use(index.routes(), index.allowedMethods())
 app.use(robot.routes(), robot.allowedMethods())
 
-const job = schedule.scheduleJob('30 10 * * *', function(){
+const job = schedule.scheduleJob('30 10 * * 1', function(){
 	RobotUtils.study()
 	console.log('通知学习成功')
 });
