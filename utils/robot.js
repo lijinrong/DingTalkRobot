@@ -11,8 +11,7 @@ exports.study = function () {
 
   const markdown = new Markdown();
 
-  markDown
-    .setTitle('前端周刊')
+  markdown.setTitle('前端周刊')
     .add('### [前端周刊](https://frontend-weekly.com/)');
 
   robot.send(markdown);
